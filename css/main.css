@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "Golos Text";  
+    src: url("../fonts/BebasNeue-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "Golos Text";  
+    src: url("../fonts/Golos/Text_Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bolder; 
+}
+@font-face {
+    font-family: "Golos Text";  
+    src: url("../fonts/Golos\ Text_Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+}
+
+html {
+    font-size: 16px;
+    font-family: "Golos Text";
+}
+
+body {
+    margin: 0;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+ul {
+    list-style: none;    
+    padding: 0;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section__title {
+    font-size: 3rem;
+}
+
+.section__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.previews {
+    display: flex;
+}
+
+.previews__item {
+    margin-right: 30px;
+}
+
+.previews__item:last-child {
+    margin-right: 0;
+}
+
+.preview__pic {
+    width: 300px;
+    height: 420px;
+}
