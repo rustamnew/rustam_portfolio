@@ -1,0 +1,18 @@
+@font-face {
+    font-family: "Golos";  
+    src: url("../fonts/BebasNeue-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+@font-face {
+    font-family: "Golos";  
+    src: url("../fonts/Golos/Text_Medium.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bolder; 
+}
+@font-face {
+    font-family: "Golos";  
+    src: url("../fonts/Golos\ Text_Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold; 
+}
