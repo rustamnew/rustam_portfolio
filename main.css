@@ -12,6 +12,11 @@ html {
   font-size: 16px;
   font-family: Golos, sans-serif;
 }
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
 
 body {
   margin: 0;
@@ -28,6 +33,10 @@ ul {
 
 .wrapper {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 .contacts {
@@ -50,6 +59,10 @@ ul {
   font-size: 1.3rem;
 }
 
+.container {
+  max-width: 1440px;
+}
+
 .section {
   height: 100vh;
   display: flex;
@@ -67,11 +80,13 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .previews {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .diplomas .previews__item {
@@ -80,9 +95,15 @@ ul {
 .diplomas .previews__item:last-child {
   margin-right: 0;
 }
+.diplomas .preview {
+  padding: 0;
+}
+.diplomas .preview .preview__image {
+  margin-bottom: 0;
+}
 
 .previews__item {
-  width: 22%;
+  width: 23%;
 }
 
 .preview {
@@ -91,7 +112,7 @@ ul {
   align-items: center;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 0.5rem;
-  padding: 2rem 0;
+  padding: 1.5rem 0;
 }
 
 .preview__title {
@@ -101,11 +122,6 @@ ul {
 
 .preview__image {
   margin-bottom: 1rem;
-}
-
-.preview__pic {
-  max-width: 18.75rem;
-  max-height: 26.25rem;
 }
 
 .preview__description {
