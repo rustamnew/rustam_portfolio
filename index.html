@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
     <link rel="stylesheet" href="./main.css">
     <title>Портфолио</title>
 </head>
@@ -22,7 +27,7 @@
         <div class="container">
             <section class="section">
                 <div class="section__content">
-                    <h2 class="section__title">Работы</h2>
+                    <h2 class="section__title top">Работы</h2>
                     <ul class="previews">
                         <li class="previews__item preview">
                             <h3 class="preview__title">Статичная вёрстка</h3>
@@ -42,7 +47,90 @@
                                 </li>
                             </ul>
                         </li>
+
+                        <li class="previews__item preview">
+                            <h3 class="preview__title">Адаптивная вёрстка</h3>
+                            <div class="preview__image">
+                                <img src="./content/previews/landing-preview.png" class="preview__pic">
+                            </div>
+                            <div class="preview__description">JS, JQuery, SCSS, Git, Yandex, Youtube</div>
     
+                            <ul class="preview__links">
+                                <li class="preview__link">
+                                    <div class="link__title">Код:</div>
+                                    <a href="https://github.com/rustamnew/rustam_loftschool_landing" class="link__address" target="_blank">https://github.com/rustamnew/rustam_loftschool_landing/</a>
+                                </li>
+    
+                                <li class="preview__link">
+                                    <div class="link__title">Страница:</div>
+                                    <a href="https://rustamnew.github.io/rustam_loftschool_landing/" class="link__address" target="_blank">https://rustamnew.github.io/rustam_loftschool_landing/</a>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li class="previews__item preview">
+                            <h3 class="preview__title">Приложение: Гео отзыв</h3>
+                            <div class="preview__image">
+                                <img src="./content/previews/geo-preview.png" class="preview__pic">
+                            </div>
+                            <div class="preview__description">JS, Yandex Api</div>
+    
+                            <ul class="preview__links">
+                                <li class="preview__link">
+                                    <div class="link__title">Код:</div>
+                                    <a href="https://github.com/rustamnew/rustam_loftschool_geoReview/" class="link__address" target="_blank">https://github.com/rustamnew/rustam_loftschool_geoReview/</a>
+                                </li>
+    
+                                <li class="preview__link">
+                                    <div class="link__title">Страница:</div>
+                                    <a href="https://rustamnew.github.io/rustam_loftschool_geoReview/" class="link__address" target="_blank">https://rustamnew.github.io/rustam_loftschool_geoReview/</a>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li class="previews__item preview">
+                            <h3 class="preview__title">Приложение: Loft Taxi</h3>
+                            <div class="preview__image">
+                                <img src="./content/previews/taxi-preview.png" class="preview__pic">
+                            </div>
+                            <div class="preview__description">JS, React, Jest</div>
+    
+                            <ul class="preview__links">
+                                <li class="preview__link">
+                                    <div class="link__title">Код:</div>
+                                    <a href="https://github.com/rustamnew/rustam_loftschool_react" class="link__address" target="_blank">https://github.com/rustamnew/rustam_loftschool_react</a>
+                                </li>
+    
+                                <li class="preview__link">
+                                    <div class="link__title">Страница:</div>
+                                    <a href="#" class="link__address">Coming soon</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="section__content mobile">
+                    <h2 class="section__title top">Работы</h2>
+                    <ul class="previews slider">
+                        <li class="previews__item preview">
+                            <h3 class="preview__title">Статичная вёрстка</h3>
+                            <div class="preview__image">
+                                <img src="./content/previews/static-preview.png" class="preview__pic">
+                            </div>
+                            <div class="preview__description">HTML, CSS, БЭМ</div>
+                            <ul class="preview__links">
+                                <li class="preview__link">
+                                    <div class="link__title">Код:</div>
+                                    <a href="https://github.com/rustamnew/rustam_loftschool_static-layout" class="link__address" target="_blank">https://rustamnew.github.io/rustam_loftschool_static-layout/</a>
+                                </li>
+    
+                                <li class="preview__link">
+                                    <div class="link__title">Страница:</div>
+                                    <a href="https://rustamnew.github.io/rustam_loftschool_static-layout/welcome" class="link__address" target="_blank">https://rustamnew.github.io/rustam_loftschool_static-layout/welcome</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="previews__item preview">
                             <h3 class="preview__title">Адаптивная вёрстка</h3>
                             <div class="preview__image">
@@ -141,8 +229,54 @@
                         </li>
                     </ul>
                 </div>
+                <div class="section__content mobile">
+                    <h2 class="section__title">Дипломы</h2>
+                    <div class="slider-diplom">
+                        <a href="./content/diplomas/loftschool_HTML+CSS.pdf" download="" target="_blank" class="preview__image">
+                            <img src="./content/previews/loftschool_HTML+CSS.png" class="preview__pic">
+                        </a>
+
+                        <a href="./content/diplomas/loftschool_landing.pdf" download="" target="_blank" class="preview__image">
+                            <img src="./content/previews/loftschool_landing.png" class="preview__pic">
+                        </a>
+
+                        <a href="./content/diplomas/loftschool_Profession.pdf" download="" target="_blank" class="preview__image">
+                            <img src="./content/previews/loftschool_Profession.png" class="preview__pic">
+                        </a>
+
+                        <a href="./content/diplomas/loftschool_js.pdf" download="" target="_blank" class="preview__image">
+                            <img src="./content/previews/loftschool_js.png" class="preview__pic">
+                        </a>
+
+                        <a href="./content/diplomas/loftschool_react.pdf" download="" target="_blank" class="preview__image">
+                            <img src="./content/previews/loftschool_react.png" class="preview__pic">
+                        </a>
+                    </div>
+                    <ul class="previews diplomas">
+                        <li class="previews__item preview">
+                            
+                        </li>
+    
+                        <li class="previews__item preview">
+                            
+                        </li>
+    
+                        <li class="previews__item preview big">
+                            
+                        </li>
+    
+                        <li class="previews__item preview">
+                            
+                        </li>
+    
+                        <li class="previews__item preview">
+                            
+                        </li>
+                    </ul>
+                </div>
             </section>
         </div> 
     </div>
+    <script src="./script.js"></script>
 </body>
 </html>
