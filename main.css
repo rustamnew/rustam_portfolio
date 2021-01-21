@@ -37,13 +37,71 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1440px;
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .container {
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 .contacts {
   position: absolute;
   top: 1%;
   left: 1%;
+}
+@media screen and (max-width: 425px) {
+  .contacts {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4d4d4d;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.contacts-button {
+  display: none;
+  position: absolute;
+  top: 2%;
+  left: 1%;
+  z-index: 100;
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media screen and (max-width: 425px) {
+  .contacts-button {
+    display: flex;
+  }
+}
+
+.contacts__close {
+  position: fixed;
+  right: 4%;
+  top: 2%;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 425px) {
+  .contacts__list {
+    color: #ffffff;
+  }
 }
 
 .contact {
@@ -59,13 +117,9 @@ ul {
   color: inherit;
   font-size: 1.3rem;
 }
-
-.container {
-  max-width: 1440px;
-}
-@media screen and (max-width: 1440px) {
-  .container {
-    max-width: 1024px;
+@media screen and (max-width: 425px) {
+  .contact__link {
+    text-decoration: underline;
   }
 }
 
@@ -79,12 +133,19 @@ ul {
 
 .section__title {
   font-size: 3rem;
-  margin-bottom: 2rem;
-}
-
-.section__title.top {
   margin-top: 5rem;
   margin-bottom: 0;
+}
+@media screen and (max-width: 425px) {
+  .section__title {
+    margin-top: 2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .section__title {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+  }
 }
 
 .section__content {
@@ -166,6 +227,11 @@ ul {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 425px) {
+  .preview {
+    padding: 0;
+  }
+}
 
 .preview__title {
   font-size: 1.5rem;
@@ -174,6 +240,13 @@ ul {
 @media screen and (max-width: 1440px) {
   .preview__title {
     font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  .preview__title {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
 
@@ -191,6 +264,15 @@ ul {
     margin-right: 0;
   }
 }
+@media screen and (max-width: 425px) {
+  .preview__image {
+    height: 15rem;
+  }
+}
+
+.slider {
+  margin: 0;
+}
 
 .slider-diplom .preview__image {
   height: 40rem;
@@ -199,6 +281,14 @@ ul {
 @media screen and (max-width: 768px) {
   .slider-diplom .preview__image {
     margin-right: 1rem;
+  }
+  .slider-diplom .preview__image:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .slider-diplom .preview__image {
+    height: 25rem;
   }
 }
 

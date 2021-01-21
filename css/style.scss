@@ -34,7 +34,20 @@ ul {
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-x: hidden;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1440px;
+
+    @include notebooks {
+        max-width: 1024px;
+    }
+
+    @include phones {
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 
@@ -43,6 +56,49 @@ ul {
     position: absolute;
     top: 1%;
     left: 1%;
+    
+    @include phones {
+        z-index: 10000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #4d4d4d;
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.contacts-button {
+    display: none;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    z-index: 100;
+    text-decoration: underline;
+    cursor: pointer;
+
+    @include phones {
+        display: flex;
+    }
+}
+
+.contacts__close {
+    position: fixed;
+    right: 4%;
+    top: 2%;
+    color: #ffffff;
+}
+
+.contacts__list {
+    @include phones {
+    //    display: none;
+    color: #ffffff;
+    }
+
 }
 
 .contact {
@@ -58,15 +114,13 @@ ul {
     text-decoration: none;
     color: inherit;
     font-size: 1.3rem;
-}
 
-.container {
-    max-width: 1440px;
-
-    @include notebooks {
-        max-width: 1024px;
+    @include phones {
+        text-decoration: underline;
     }
 }
+
+
 
 .section {
     height: 100vh;
@@ -78,13 +132,17 @@ ul {
 
 .section__title {
     font-size: 3rem;
-    margin-bottom: 2rem;
-    
-}
-
-.section__title.top {
     margin-top: 5rem;
     margin-bottom: 0;
+
+    @include phones {
+        margin-top: 2rem;
+    }
+    
+    @include phones {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+    }
 }
 
 .section__content {
@@ -170,6 +228,10 @@ ul {
             margin-right: 0;
         }
     }
+
+    @include phones {
+        padding: 0;
+    }
 }
 
 .preview__title {
@@ -178,6 +240,12 @@ ul {
 
     @include notebooks {
         font-size: 1.2rem;
+    }
+
+    @include phones {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        font-weight: 300;
     }
 }
 
@@ -195,6 +263,14 @@ ul {
             margin-right: 0;
         }
     }
+
+    @include phones {
+        height: 15rem;
+    }
+}
+
+.slider {
+    margin: 0;
 }
 
 .slider-diplom .preview__image {
@@ -203,7 +279,16 @@ ul {
 
     @include tablets {
         margin-right: 1rem;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
+
+    @include phones {
+        height: 25rem;
+    }
+
 }
 
 .preview__description {
