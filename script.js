@@ -2,12 +2,13 @@ let screenWidth = window.innerWidth
 
 let slideWidth = 600
 
-if (screenWidth < 768) {
+if (screenWidth <= 768) {
     slideWidth = 400
 }
-if (screenWidth <= 320 ) {
+if (screenWidth <= 425) {
     slideWidth = 300
 }
+
 
 $(document).ready(function(){
     $('.slider').bxSlider({
