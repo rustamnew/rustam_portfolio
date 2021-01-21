@@ -1,4 +1,5 @@
 let screenWidth = window.innerWidth
+let screenHeigth = window.innerHeight
 
 let slideWidth = 600
 
@@ -38,9 +39,11 @@ contactsClose.addEventListener('click', (e) => {
     wrapper.style.height = 'auto'
 })
 
+
+    //view screen height, width
 let viewports = document.createElement('div')
 viewports.style.position = 'absolute'
 viewports.style.right = 0
 viewports.style.top = 0
-viewports.innerHTML = screenWidth
+viewports.innerHTML = screenWidth + ';' + screenHeigth
 wrapper.append(viewports)

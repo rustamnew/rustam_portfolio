@@ -303,13 +303,13 @@ ul {
 }
 
 .preview__links {
-  width: 80%;
-  overflow: hidden;
+  width: 100%;
   align-self: start;
-  padding-left: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 .preview__link {
+  overflow: hidden;
   margin-bottom: 1rem;
 }
 .preview__link:last-child {
@@ -318,6 +318,7 @@ ul {
 
 .link__address {
   white-space: nowrap;
+  width: 100%;
 }
 
 .previews.none {
